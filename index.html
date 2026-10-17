@@ -17,7 +17,8 @@
   .card h2 .n { color:var(--orange); margin-right:10px; }
   .body { display:grid; grid-template-columns: 1fr 320px; gap:18px; padding:16px 18px; }
   .pair { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-  .pair + .pair { margin-top:10px; }
+  .ex { font-size:13px; font-weight:bold; color:var(--muted); margin:12px 0 4px; letter-spacing:.5px; }
+  .ex:first-child { margin-top:0; }
   figure { margin:0; background:var(--ink); border-radius:8px; padding:6px; }
   figure.after { outline:3px solid var(--orange); }
   figure video { width:100%; display:block; border-radius:5px; background:#000; }
@@ -44,20 +45,28 @@
 <body>
 <div class="page">
 <h1>Fish: game feel, before / after</h1>
-<p class="sub"><b>One card per change. BEFORE = every new effect off. AFTER (orange frame) = only that one change on</b> - the same moment
-recorded twice in real time, played in sync. Slowed pairs come first, then the same at real speed. No sound.</p>
+<p class="sub"><b>One card per change, 3 examples each. In every example BEFORE and AFTER are the same scene - same foe, same spot,
+same moment - recorded twice: BEFORE = every new effect off, AFTER (orange frame) = only that one change on.</b> They play in sync. No sound.</p>
 
 <div class="card"><h2><span class="n">1</span>Hit squash</h2>
 <div class="body">
   <div class="vids">
+    <div class="ex">EXAMPLE 1 - BLUE TANG</div>
     <div class="pair">
-      <figure class="before"><video src="video/squash_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
-      <figure class="after"><video src="video/squash.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="before"><video src="video/squash_1_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/squash_1.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 2 - LURE ANGLER</div>
     <div class="pair">
-      <figure class="before"><video src="video/squash_rt_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
-      <figure class="after"><video src="video/squash_rt.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="before"><video src="video/squash_2_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/squash_2.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 3 - CARAPACE BRUTE</div>
+    <div class="pair">
+      <figure class="before"><video src="video/squash_3_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/squash_3.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    
   </div>
   <div class="info">
     <p class="look">A heavy hit, then a light one. <b>After:</b> the foe squashes along the blow, springs back past its shape and wobbles before it settles.</p>
@@ -69,17 +78,25 @@ recorded twice in real time, played in sync. Slowed pairs come first, then the s
 <div class="card"><h2><span class="n">2</span>Ink impact frame</h2>
 <div class="body">
   <div class="vids">
+    <div class="ex">EXAMPLE 1 - BLUE TANG</div>
     <div class="pair">
-      <figure class="before"><video src="video/ink_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
-      <figure class="after"><video src="video/ink.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="before"><video src="video/ink_1_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/ink_1.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 2 - LURE ANGLER</div>
     <div class="pair">
-      <figure class="before"><video src="video/ink_rt_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
-      <figure class="after"><video src="video/ink_rt.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="before"><video src="video/ink_2_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/ink_2.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 3 - CARAPACE BRUTE</div>
+    <div class="pair">
+      <figure class="before"><video src="video/ink_3_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/ink_3.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    
   </div>
   <div class="info">
-    <p class="look">Same hits. <b>After:</b> on the heavy hit the foe turns into a solid ink silhouette for a few frames.</p>
+    <p class="look">Same hits. <b>After:</b> on the heavy hit the foe turns into a solid ink silhouette for a few frames (before: the game's white flash).</p>
     <p class="src"><a href="https://www.instagram.com/reel/Deidw81hnmg/">@vasilev.yegor - anime hit</a><small>"black shapes on one"</small></p>
     <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Ink impact frame (inkFrameSeconds, inkFrameOnLightHits)</i></p>
   </div>
@@ -88,14 +105,22 @@ recorded twice in real time, played in sync. Slowed pairs come first, then the s
 <div class="card"><h2><span class="n">3</span>Damage numbers</h2>
 <div class="body">
   <div class="vids">
+    <div class="ex">EXAMPLE 1 - BLUE TANG</div>
     <div class="pair">
-      <figure class="before"><video src="video/numbers_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
-      <figure class="after"><video src="video/numbers.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="before"><video src="video/numbers_1_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/numbers_1.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 2 - LURE ANGLER</div>
     <div class="pair">
-      <figure class="before"><video src="video/numbers_rt_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
-      <figure class="after"><video src="video/numbers_rt.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="before"><video src="video/numbers_2_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/numbers_2.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 3 - CARAPACE BRUTE</div>
+    <div class="pair">
+      <figure class="before"><video src="video/numbers_3_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/numbers_3.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    
   </div>
   <div class="info">
     <p class="look">Same hits. <b>After:</b> digits in an ink outline fly up on an arc; heavy hits are bigger and orange.</p>
@@ -107,14 +132,22 @@ recorded twice in real time, played in sync. Slowed pairs come first, then the s
 <div class="card"><h2><span class="n">4</span>Recoil</h2>
 <div class="body">
   <div class="vids">
+    <div class="ex">EXAMPLE 1 - BLUE TANG</div>
     <div class="pair">
-      <figure class="before"><video src="video/recoil_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
-      <figure class="after"><video src="video/recoil.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="before"><video src="video/recoil_1_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/recoil_1.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 2 - LURE ANGLER</div>
     <div class="pair">
-      <figure class="before"><video src="video/recoil_rt_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
-      <figure class="after"><video src="video/recoil_rt.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="before"><video src="video/recoil_2_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/recoil_2.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 3 - CARAPACE BRUTE</div>
+    <div class="pair">
+      <figure class="before"><video src="video/recoil_3_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/recoil_3.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    
   </div>
   <div class="info">
     <p class="look">Same hits. <b>After:</b> your fish is pushed back by its own blow (more on the heavy one).</p>
@@ -126,14 +159,22 @@ recorded twice in real time, played in sync. Slowed pairs come first, then the s
 <div class="card"><h2><span class="n">5</span>Health-bar catch-up</h2>
 <div class="body">
   <div class="vids">
+    <div class="ex">EXAMPLE 1 - BLUE TANG</div>
     <div class="pair">
-      <figure class="before"><video src="video/bar_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">2x slower</span></figcaption></figure>
-      <figure class="after"><video src="video/bar.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">2x slower</span></figcaption></figure>
+      <figure class="before"><video src="video/bar_1_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">2x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/bar_1.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">2x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 2 - LURE ANGLER</div>
     <div class="pair">
-      <figure class="before"><video src="video/bar_rt_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
-      <figure class="after"><video src="video/bar_rt.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="before"><video src="video/bar_2_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">2x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/bar_2.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">2x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 3 - CARAPACE BRUTE</div>
+    <div class="pair">
+      <figure class="before"><video src="video/bar_3_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/bar_3.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    
   </div>
   <div class="info">
     <p class="look">4 light hits. <b>After:</b> the bar over the foe keeps a pale strip of what was just lost, holds it, then drains it down.</p>
@@ -145,14 +186,22 @@ recorded twice in real time, played in sync. Slowed pairs come first, then the s
 <div class="card"><h2><span class="n">6</span>Death animation</h2>
 <div class="body">
   <div class="vids">
+    <div class="ex">EXAMPLE 1 - BLUE TANG</div>
     <div class="pair">
-      <figure class="before"><video src="video/death_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">2x slower</span></figcaption></figure>
-      <figure class="after"><video src="video/death.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">2x slower</span></figcaption></figure>
+      <figure class="before"><video src="video/death_1_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">2x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/death_1.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">2x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 2 - LURE ANGLER</div>
     <div class="pair">
-      <figure class="before"><video src="video/death_rt_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
-      <figure class="after"><video src="video/death_rt.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="before"><video src="video/death_2_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">2x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/death_2.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">2x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 3 - CARAPACE BRUTE</div>
+    <div class="pair">
+      <figure class="before"><video src="video/death_3_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/death_3.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    
   </div>
   <div class="info">
     <p class="look">A kill. <b>Before:</b> the body shrinks away on the spot. <b>After:</b> it flashes ink, rolls belly-up, drifts with the blow and floats up swaying, then shrinks.</p>
@@ -164,10 +213,22 @@ recorded twice in real time, played in sync. Slowed pairs come first, then the s
 <div class="card"><h2><span class="n">7</span>Last kill of a room: slow motion</h2>
 <div class="body">
   <div class="vids">
+    <div class="ex">EXAMPLE 1 - BLUE TANG</div>
     <div class="pair">
-      <figure class="before"><video src="video/finisher_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
-      <figure class="after"><video src="video/finisher.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="before"><video src="video/finisher_1_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/finisher_1.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 2 - LURE ANGLER</div>
+    <div class="pair">
+      <figure class="before"><video src="video/finisher_2_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/finisher_2.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    <div class="ex">EXAMPLE 3 - CARAPACE BRUTE</div>
+    <div class="pair">
+      <figure class="before"><video src="video/finisher_3_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/finisher_3.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    
   </div>
   <div class="info">
     <p class="look">The room's last kill. <b>After:</b> right after the hit the world drops to a fifth of its speed for half a second, then eases back. The camera does not move.</p>
@@ -179,14 +240,22 @@ recorded twice in real time, played in sync. Slowed pairs come first, then the s
 <div class="card"><h2><span class="n">8</span>Dash squash-stretch</h2>
 <div class="body">
   <div class="vids">
+    <div class="ex">EXAMPLE 1 - DASH</div>
     <div class="pair">
-      <figure class="before"><video src="video/stretch_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
-      <figure class="after"><video src="video/stretch.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="before"><video src="video/stretch_1_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/stretch_1.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 2 - DASH</div>
     <div class="pair">
-      <figure class="before"><video src="video/stretch_rt_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
-      <figure class="after"><video src="video/stretch_rt.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="before"><video src="video/stretch_2_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">2x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/stretch_2.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">2x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 3 - DASH</div>
+    <div class="pair">
+      <figure class="before"><video src="video/stretch_3_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/stretch_3.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    
   </div>
   <div class="info">
     <p class="look">One dash. <b>After:</b> the fish squashes as it sets off, stretches along the dash and settles with an overshoot.</p>
@@ -198,14 +267,22 @@ recorded twice in real time, played in sync. Slowed pairs come first, then the s
 <div class="card"><h2><span class="n">9</span>Dash after-images</h2>
 <div class="body">
   <div class="vids">
+    <div class="ex">EXAMPLE 1 - DASH</div>
     <div class="pair">
-      <figure class="before"><video src="video/ghosts_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
-      <figure class="after"><video src="video/ghosts.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="before"><video src="video/ghosts_1_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/ghosts_1.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 2 - DASH</div>
     <div class="pair">
-      <figure class="before"><video src="video/ghosts_rt_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
-      <figure class="after"><video src="video/ghosts_rt.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="before"><video src="video/ghosts_2_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">2x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/ghosts_2.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">2x slower</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 3 - DASH</div>
+    <div class="pair">
+      <figure class="before"><video src="video/ghosts_3_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/ghosts_3.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    
   </div>
   <div class="info">
     <p class="look">One dash. <b>After:</b> a trail of fading copies of the fish is left behind it.</p>
@@ -217,13 +294,25 @@ recorded twice in real time, played in sync. Slowed pairs come first, then the s
 <div class="card"><h2><span class="n">10</span>Points punch</h2>
 <div class="body">
   <div class="vids">
+    <div class="ex">EXAMPLE 1 - +3 POINTS</div>
     <div class="pair">
-      <figure class="before"><video src="video/points_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
-      <figure class="after"><video src="video/points.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="before"><video src="video/points_1_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/points_1.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
     </div>
+    <div class="ex">EXAMPLE 2 - +6 POINTS</div>
+    <div class="pair">
+      <figure class="before"><video src="video/points_2_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/points_2.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    <div class="ex">EXAMPLE 3 - +15 POINTS</div>
+    <div class="pair">
+      <figure class="before"><video src="video/points_3_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/points_3.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+    
   </div>
   <div class="info">
-    <p class="look">6 points come in - watch the EVOLUTION card top-left. <b>After:</b> the card punches: it jumps big, shakes, springs back and the number flashes gold.</p>
+    <p class="look">Points come in - watch the EVOLUTION card top-left. <b>After:</b> the card punches: it jumps big, shakes, springs back and the number flashes gold.</p>
     <p class="src"><a href="https://www.instagram.com/reel/DeikuCgOkof/">@motionbykrit - coin pickup</a><small>"boom! bump the number"</small></p>
     <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Points punch (pointsPunchScale, pointsPunchHz, pointsPunchDamping, pointsPunchTilt)</i></p>
   </div>
