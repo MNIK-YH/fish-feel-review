@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fish - game feel: before / after</title>
+<style>
+  :root { --ink:#1a1310; --paper:#ddc79e; --cream:#efe1c4; --orange:#e36e2e; --teal:#2f6f73; --muted:#7a6650; --red:#a8322a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#1b2a2c; color:var(--ink); font:16px/1.5 Georgia, "Times New Roman", serif; }
+  .page { max-width:1240px; margin:28px auto; background:var(--cream); border:6px solid var(--ink); border-radius:14px 9px 16px 8px;
+          padding:28px 36px; box-shadow:8px 10px 0 #0c1516; }
+  h1 { font-size:34px; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 14px; }
+  .where { background:var(--ink); color:var(--cream); border-radius:10px 6px 12px 7px; padding:14px 20px; margin:14px 0 22px; }
+  .where b { color:#ffd27a; } .where code { background:#3a2c22; color:#ffe7b8; padding:1px 6px; border-radius:4px; }
+  code { background:#e9d6ae; padding:1px 5px; border-radius:4px; font-size:14px; }
+  .card { border:4px solid var(--ink); border-radius:12px 7px 14px 8px; margin:0 0 26px; background:#f4e8cf; overflow:hidden; }
+  .card h2 { margin:0; background:var(--ink); color:var(--cream); font-size:22px; padding:10px 18px; letter-spacing:.5px; }
+  .card h2 .n { color:var(--orange); margin-right:10px; }
+  .body { display:grid; grid-template-columns: 1fr 340px; gap:18px; padding:16px 18px; }
+  .vids { display:grid; gap:10px; }
+  .vids.two { grid-template-columns:1fr 1fr; }
+  figure { margin:0; background:var(--ink); border-radius:8px; padding:6px; }
+  figure video { width:100%; display:block; border-radius:5px; background:#000; }
+  figcaption { color:var(--cream); font-size:13px; padding:5px 3px 1px; }
+  figcaption b { color:#ffd27a; }
+  .info p { margin:0 0 10px; }
+  .info .look { background:#e8d8b8; border-left:5px solid var(--orange); padding:8px 10px; border-radius:4px; }
+  .info .src a { color:var(--teal); font-weight:bold; text-decoration:none; }
+  .info .src small { display:block; color:var(--muted); font-style:italic; }
+  .info .knob { font-size:14px; }
+  .note { color:var(--red); font-size:14px; }
+  .speed { display:inline-block; font-size:12px; font-weight:bold; background:var(--orange); color:#fff; border-radius:8px; padding:0 6px; margin-left:4px; }
+  .speed.rt { background:var(--teal); }
+.pair { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .pair + .pair { margin-top:10px; }
+  figure.before figcaption b { color:#c9b8a0; }
+  figure.after { outline:3px solid var(--orange); }
+  @media (max-width: 800px) {
+    body { font-size:15px; }
+    .page { margin:0; border-width:0; border-radius:0; padding:16px 12px; box-shadow:none; }
+    h1 { font-size:26px; }
+    .body { grid-template-columns:1fr; padding:10px; gap:10px; }
+    .pair { grid-template-columns:1fr; gap:6px; }
+    .card h2 { font-size:19px; }
+    .knob { display:none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+<h1>Game feel changes, in video</h1>
+<p class="sub"><b>One card per change. BEFORE (left) = every new effect off. AFTER (right) = only that one change on</b> - the same moment recorded twice, played in sync. No sound.</p>
+
+<div class="card"><h2><span class="n">1</span>Hit squash</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/squash_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/squash.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+    </div>
+    <div class="pair sync">
+      <figure class="before"><video src="video/squash_off_real.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/squash_real.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">A heavy hit, then a light one. <b>After:</b> the foe squashes along the blow, springs back past its shape and settles.</p>
+    <p class="src"><a href="https://www.instagram.com/reel/DejpGOctoHu/">@vasilev.yegor - Disney rules</a><small>"the enemy squashes on the hit"</small></p>
+    <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Hit squash</i> (lightSquash, heavySquash, springHz, springDamping)</p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">2</span>Ink impact frame</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/ink_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/ink.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+    </div>
+    <div class="pair sync">
+      <figure class="before"><video src="video/ink_off_real.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/ink_real.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">Same hits. <b>After:</b> on the heavy hit the foe turns into a solid ink silhouette for about 2 frames.</p>
+    <p class="src"><a href="https://www.instagram.com/reel/Deidw81hnmg/">@vasilev.yegor - anime hit</a><small>"black shapes on one"</small></p>
+    <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Ink impact frame</i> (inkFrameSeconds, inkFrameOnLightHits)</p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">3</span>Damage numbers</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/numbers_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/numbers.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+    </div>
+    <div class="pair sync">
+      <figure class="before"><video src="video/numbers_off_real.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/numbers_real.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">Same hits. <b>After:</b> cream digits in an ink outline fly up on an arc; heavy hits are bigger and orange.</p>
+    <p class="src"><a href="https://www.instagram.com/reel/Deff1_AtlFi/">@vasilev.yegor - spell</a><small>"damage numbers - bigger for crits"</small></p>
+    <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Damage numbers</i> (numberSize, numberLife, numberLaunch, numberGravity)</p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">4</span>Recoil</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/recoil_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/recoil.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+    </div>
+    <div class="pair sync">
+      <figure class="before"><video src="video/recoil_off_real.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/recoil_real.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">Same hits. <b>After:</b> your fish is nudged back a little by its own blow (more on the heavy one).</p>
+    <p class="src"><a href="https://www.instagram.com/reel/DemDNnfj1TW/">@make.money.with.ai</a><small>"the player bounces back"</small></p>
+    <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Recoil</i> (meleeRecoilSpeed, heavyRecoilScale, recoilDecay)</p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">5</span>Health-bar catch-up</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/bar_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">2x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/bar.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">2x slower</span></figcaption></figure>
+    </div>
+    <div class="pair sync">
+      <figure class="before"><video src="video/bar_off_real.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/bar_real.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">4 light hits. <b>After:</b> the bar over the foe keeps a pale strip of what was just lost, holds it, then drains it down.</p>
+    <p class="src"><a href="https://www.instagram.com/reel/DejijtPzhYJ/">@porsukgames - combat</a><small>"a delayed white catch-up trail"</small></p>
+    <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Health bar catch-up</i> (barCatchUpHold, barCatchUpSpeed, colour)</p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">6</span>Kill fling</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/kill_fling_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/kill_fling.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+    </div>
+    <div class="pair sync">
+      <figure class="before"><video src="video/kill_fling_off_real.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/kill_fling_real.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">A kill. <b>Before:</b> the body shrinks away on the spot. <b>After:</b> it swells for an instant, then is thrown along the blow, spinning, and lives a little longer so you see it fly.</p>
+    <p class="src"><a href="https://www.instagram.com/reel/Dehz2z9Nc7F/">@vasilev.yegor - shots</a><small>"the last bullet has to feel the biggest"</small><a href="https://www.instagram.com/reel/DecdQ9ltnjf/">@vasilev.yegor - punch</a><small>"pop it like a balloon"</small></p>
+    <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Kill</i> (killPop, killFlingSpeed, killSpin, killFlingDecay, killCorpseSeconds)</p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">7</span>Last kill of a room: slow motion</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/finisher_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/finisher.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">The room's last kill, real speed. <b>After:</b> the world runs at about a third of its speed for a moment, then eases back. The camera does not move.</p>
+    <p class="src"><a href="https://www.instagram.com/reel/Deh3qQ0RU4e/">@motionbykrit - barrel</a><small>"drop to half speed for a split second, right at the peak"</small></p>
+    <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Last kill of a room</i> (finisherScale, finisherHold, finisherEase)</p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">8</span>Dash squash-stretch</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/stretch_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/stretch.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+    </div>
+    <div class="pair sync">
+      <figure class="before"><video src="video/stretch_off_real.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/stretch_real.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">One dash. <b>After:</b> the fish squashes as it sets off, stretches along the dash, and settles with a little overshoot.</p>
+    <p class="src"><a href="https://www.instagram.com/reel/DehPnhjxUvB/">@motionbykrit - dash</a><small>"squash into the dash and stretch along it"</small></p>
+    <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Dash</i> (dashStretchAmount, dashStartSquash)</p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">9</span>Dash after-images</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/ghosts_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed">4x slower</span></figcaption></figure>
+      <figure class="after"><video src="video/ghosts.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed">4x slower</span></figcaption></figure>
+    </div>
+    <div class="pair sync">
+      <figure class="before"><video src="video/ghosts_off_real.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/ghosts_real.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">One dash. <b>After:</b> a trail of fading copies of the fish is left behind it.</p>
+    <p class="src"><a href="https://www.instagram.com/reel/DehPnhjxUvB/">@motionbykrit - dash</a><small>"leave ghost copies behind that fade away"</small></p>
+    <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Dash</i> (afterimageSpacing, afterimageMax, afterimageLife, afterimageOpacity, afterimageWash)</p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">10</span>Prize points fly to the counter</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/points_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/points.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">A 6-point payout - watch the EVOLUTION card top-left. <b>Before:</b> the number just jumps. <b>After:</b> gold sparks fly to it on curves and it counts up as each lands.</p>
+    <p class="src"><a href="https://www.instagram.com/reel/DeikuCgOkof/">@motionbykrit - coin pickup</a><small>"fly the coin up to the counter, and boom! bump the number"</small></p>
+    <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Points fly to the counter</i></p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">11</span>Healing has a price</h2>
+<div class="body">
+  <div class="vids">
+    <div class="pair sync">
+      <figure class="before"><video src="video/heal_price_off.mp4" muted playsinline></video><figcaption><b>BEFORE</b> <span class="speed rt">real speed</span></figcaption></figure>
+      <figure class="after"><video src="video/heal_price.mp4" muted playsinline></video><figcaption><b>AFTER</b> <span class="speed rt">real speed</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="info">
+    <p class="look">A 40% heal. <b>Before:</b> you just heal. <b>After:</b> the game pauses on an ink card with 3 afflictions; one is picked and a tag under the EVOLUTION card shows it, one dot per room left.</p>
+    <p class="src"><a href="https://www.instagram.com/reel/DeWxkQrsXk6/">@featherweight_games - Chained Beasts</a><small>"when you wish to heal, you must also opt into one of a variety of afflictions"</small></p>
+    <p class="knob"><b>Fish &gt; Heal Price</b> (enabledInRuns, offers, minHealPercent, the affliction list)</p>
+  </div>
+</div></div>
+
+<div class="card"><h2><span class="n">12</span>Combo pitch (sound only)</h2>
+<div class="body"><div class="info" style="grid-column:1/-1">
+  <p class="look">Each hit in a quick chain plays a step higher than the last, and heavy hits get a low thud layer. It can't be shown in a silent clip - try it in the Game Feel Gym with the COMBO PITCH chip on/off.</p>
+  <p class="src"><a href="https://www.instagram.com/reel/DejijtPzhYJ/">@porsukgames - combat</a><small>"climb the pitch with every hit in a row"</small></p>
+  <p class="knob"><b>Fish &gt; Game Feel:</b> <i>Combo pitch</i> (comboWindow, comboPitchStep, heavyLowLayer)</p>
+</div></div></div>
+
+</div>
+<script>
+// Each before/after pair plays in lock-step; only pairs on screen play (phones).
+document.querySelectorAll('.pair.sync').forEach(pair => {
+  const v = [...pair.querySelectorAll('video')];
+  let on = false;
+  const start = () => v.forEach(x => { x.currentTime = 0; x.play().catch(() => {}); });
+  v.forEach(x => { x.loop = false; x.preload = 'metadata';
+    x.addEventListener('ended', () => { if (on && v.every(y => y.ended)) setTimeout(start, 400); }); });
+  new IntersectionObserver(es => es.forEach(e => {
+    on = e.isIntersecting;
+    if (on) start(); else v.forEach(x => x.pause());
+  }), { threshold: 0.25 }).observe(pair);
+});
+</script>
+</body>
+</html>
